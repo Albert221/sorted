@@ -6,7 +6,7 @@
 Sort lists of complex objects with ease.
 
 <div align="center">
-    <img src="assets/code-example.png" alt="Beautiful code example">
+    <img src="https://raw.githubusercontent.com/Albert221/sorted/main/assets/code-example.png" alt="Beautiful code example">
 </div>
 
 ## Usage
