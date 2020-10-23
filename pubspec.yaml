@@ -2,7 +2,7 @@ name: sorted
 description: >
   Sort lists of complex objects with ease.
   Simple but powerful extension method.
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/Albert221/sorted
 
 environment:
