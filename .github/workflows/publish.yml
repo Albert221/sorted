@@ -1,0 +1,26 @@
+name: Publish
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  publish:
+    name: Publish to pub.dev
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: google/dart:2.10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download pub.dev credentials
+        run: |
+          mkdir -p ~/.pub-cache
+          echo "${{ secrets.PUB_DEV_CREDENTIALS }}" > ~/.pub-cache/credentials.json
+
+      - name: Publish
+        run: dart publish -f
