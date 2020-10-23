@@ -1,6 +1,6 @@
 import '../rule.dart';
 
-class SortedComparable<T, P extends Comparable<P>> extends SortedRule<T, P> {
+class SortedComparable<T, P extends Comparable> extends SortedRule<T, P> {
   const SortedComparable(SortedMapper<T, P> mapper, {bool invert = false})
       : super(mapper, invert: invert);
 
