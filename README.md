@@ -78,4 +78,4 @@ Sorts items by the mapped property value using a custom comparator provided as a
 [pub-link]: https://pub.dev/packages/sorted
 [pub-badge]: https://img.shields.io/pub/v/sorted
 [tests-link]: https://github.com/Albert221/sorted/actions?query=workflow%3ATest
-[tests-badge]: https://img.shields.io/github/workflow/status/Albert221/sorted/test
+[tests-badge]: https://img.shields.io/github/workflow/status/Albert221/sorted/Test
