@@ -3,7 +3,7 @@
 [![Package on pub.dev][pub-badge]][pub-link]
 [![Test suite][tests-badge]][tests-link]
 
-Sort lists of complex objects with ease.
+Sort lists of complex objects with ease. Simple but powerful extension method.
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/Albert221/sorted/main/assets/code-example.png" alt="Beautiful code example">
