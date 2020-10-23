@@ -1,7 +1,7 @@
 library sorted;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/extension.dart';
+export 'src/rule.dart';
+export 'src/rules/comparable.dart';
+export 'src/rules/group_ordered.dart';
+export 'src/rules/ordered.dart';
