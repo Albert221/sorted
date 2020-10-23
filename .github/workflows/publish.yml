@@ -23,4 +23,4 @@ jobs:
           echo "${{ secrets.PUB_DEV_CREDENTIALS }}" > ~/.pub-cache/credentials.json
 
       - name: Publish
-        run: dart publish -f
+        run: pub publish -f
