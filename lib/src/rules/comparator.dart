@@ -1,5 +1,6 @@
 import '../rule.dart';
 
+/// Sorting rule that uses a custom `comparator`.
 class SortedComparator<T, P> extends SortedRule<T, P> {
   SortedComparator(
     SortedMapper<T, P> mapper,

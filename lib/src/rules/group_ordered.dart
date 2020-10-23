@@ -1,5 +1,8 @@
 import '../rule.dart';
 
+/// Sorting rule that sorts items in the same order as the order of the group
+/// in [orderGroups] in which the value is present. Values in the same group
+/// are considered equal.
 class SortedGroupOrdered<T, P> extends SortedRule<T, P> {
   SortedGroupOrdered(
     SortedMapper<T, P> mapper,

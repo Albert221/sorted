@@ -1,5 +1,7 @@
 import '../rule.dart';
 
+/// Sorting rule that sorts items in the same order as the values in [order]
+/// are present.
 class SortedOrdered<T, P> extends SortedRule<T, P> {
   SortedOrdered(SortedMapper<T, P> mapper, this.order, {bool invert = false})
       : assert(order != null),
