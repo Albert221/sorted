@@ -23,6 +23,9 @@ jobs:
         run: |
           mkdir -p ~/.pub-cache
           echo $CREDENTIALS > ~/.pub-cache/credentials.json
+      
+      - name: Ignore not needed files
+        run: echo .github >> .gitignore
 
       - name: Publish
         run: pub publish -f
