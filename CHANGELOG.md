@@ -1,3 +1,8 @@
+# 1.1.0
+
+- Fix original list being mutated.
+- Expand the sorted extension method to work on `Iterable<T>` instead of `List<T>`.
+
 # 1.0.0+1
 
 - Make package description a little bit longer.
