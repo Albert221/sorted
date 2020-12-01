@@ -4,12 +4,16 @@ import 'package:test/test.dart';
 
 void main() {
   group('SortedExtension', () {
-    test('returns the same list with no rules', () {
+    test('returns list with the same items with no rules', () {
       final list = ['foo', 'bar', 'baz'];
 
       final result = list.sorted([]);
 
       expect(result, ['foo', 'bar', 'baz']);
+
+      // Make sure it's not the same list so we won't mutate
+      // the original at some point after sorted().
+      expect(identical(list, result), false);
     });
 
     test('correctly sorts using one rule', () {
@@ -25,6 +29,9 @@ void main() {
       final result = list.sorted([rule1]);
 
       expect(result, ['foo', 'baz', 'bar']);
+
+      // Make sure the original list wasn't mutated.
+      expect(list, ['foo', 'bar', 'baz']);
     });
 
     test('correctly sorts using two rules', () {

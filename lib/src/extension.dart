@@ -6,9 +6,9 @@ extension Sorted<T> on List<T> {
   List<T> sorted(List<SortedRule> rules) {
     assert(rules != null);
 
-    if (rules.isEmpty) return this;
+    if (rules.isEmpty) return List.of(this);
 
-    return this
+    return List.of(this)
       ..sort((a, b) {
         int result = 0;
         for (final rule in rules) {
