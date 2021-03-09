@@ -6,6 +6,7 @@ void main() {
   group('SortedRule', () {
     test('compareComplex calls compare with mapped object', () {
       final rule = Rule((x) => 'test$x');
+      when(rule.compare('testa', 'testb')).thenReturn(1);
 
       rule.compareComplex('a', 'b');
 
@@ -14,6 +15,11 @@ void main() {
   });
 }
 
-class Rule extends SortedRule with Mock {
-  Rule(SortedMapper mapper) : super(mapper);
+class Rule extends SortedRule<String, String> with Mock {
+  Rule(SortedMapper<String, String> mapper) : super(mapper);
+
+  @override
+  int compare(String? a, String? b) =>
+      super.noSuchMethod(Invocation.method(#compare, [a, b]), returnValue: 0)
+          as int;
 }

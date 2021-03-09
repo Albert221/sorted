@@ -2,9 +2,7 @@ typedef SortedMapper<T, P> = P Function(T);
 
 /// A rule describing how to compare two properties.
 abstract class SortedRule<T, P> {
-  const SortedRule(this.mapper, {this.invert = false})
-      : assert(mapper != null),
-        assert(invert != null);
+  const SortedRule(this.mapper, {this.invert = false});
 
   /// Function mapping an object to the desired property (or itself).
   final SortedMapper<T, P> mapper;

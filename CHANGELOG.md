@@ -1,3 +1,8 @@
+# 2.0.0
+
+- **BREAKING** Migrate to null-safety.
+- **BREAKING** Bump Dart requirement to 2.12.
+
 # 1.1.0
 
 - Fix original list being mutated.

@@ -4,8 +4,7 @@ import '../rule.dart';
 /// are present.
 class SortedOrdered<T, P> extends SortedRule<T, P> {
   SortedOrdered(SortedMapper<T, P> mapper, this.order, {bool invert = false})
-      : assert(order != null),
-        assert(
+      : assert(
           order.length == order.toSet().length,
           'order must contain only unique items',
         ),
