@@ -8,9 +8,7 @@ class SortedGroupOrdered<T, P> extends SortedRule<T, P> {
     SortedMapper<T, P> mapper,
     this.orderGroups, {
     bool invert = false,
-  })  : assert(orderGroups != null),
-        assert(orderGroups.every((group) => group != null)),
-        assert(
+  })  : assert(
           () {
             final flat = orderGroups.expand((x) => x);
             return flat.toList().length == flat.toSet().length;

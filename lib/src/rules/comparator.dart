@@ -6,8 +6,7 @@ class SortedComparator<T, P> extends SortedRule<T, P> {
     SortedMapper<T, P> mapper,
     this.comparator, {
     bool invert = false,
-  })  : assert(comparator != null),
-        super(mapper, invert: invert);
+  }) : super(mapper, invert: invert);
 
   final Comparator<P> comparator;
 

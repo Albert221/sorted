@@ -1,7 +1,13 @@
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:sorted/sorted.dart';
 import 'package:test/test.dart';
 
+import 'extension_test.mocks.dart';
+
+@GenerateMocks([], customMocks: [
+  MockSpec<SortedRule<String, String>>(as: #MockRule),
+])
 void main() {
   group('SortedExtension', () {
     test('returns list with the same items with no rules', () {
@@ -52,5 +58,3 @@ void main() {
     });
   });
 }
-
-class MockRule extends Mock implements SortedRule<String, String> {}
