@@ -5,9 +5,19 @@
 
 Sort lists of complex objects with ease. Simple but powerful extension method.
 
-<div align="center">
-    <img src="https://raw.githubusercontent.com/Albert221/sorted/main/assets/code-example.png" alt="Beautiful code example">
-</div>
+```dart
+auctions.sorted([
+    SortedOrdered<Auction, AuctionStatus>(
+        (action) => auction.buyerContext.status,
+        [AuctionStatus.live, AuctionStatus.won, AuctionStatus.lost],
+    ),
+    SortedComparable<Auction, DateTime>((auction) => auction.endedAt),
+    SortedComparable<Auction, DateTime>(
+        (auction) => auction.endedAt,
+        invert: true,
+    )
+]);
+```
 
 ## Usage
 
