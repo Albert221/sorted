@@ -1,3 +1,7 @@
+# 2.0.0+1
+
+- Replace image with snippet in README.
+
 # 2.0.0
 
 - **BREAKING** Migrate to null-safety.
