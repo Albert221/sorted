@@ -1,21 +1,37 @@
+import 'package:sorted/src/sorting_strategies/default.dart';
+import 'package:sorted/src/sorting_strategies/merge.dart';
+import 'package:sorted/src/sorting_strategy.dart';
+
 import 'rule.dart';
 
 extension Sorted<T> on Iterable<T> {
-  /// Returns a sorted list according to the `rules`. Order matters, so if
+  /// Returns a sorted list according to the [rules]. Order matters, so if
   /// first rule considers two items equal, next one will decide and so on.
-  List<T> sorted(List<SortedRule> rules) {
-    if (rules.isEmpty) return List.of(this);
+  ///
+  /// A sorting strategy can be provided through [sortingStrategy] which
+  /// will perform the final sorting procedure. Defaults to [DefaultSortingStrategy].
+  /// Consider using [MergeSortingStrategy] if a stable sort is needed.
+  List<T> sorted(
+    List<SortedRule> rules, {
+    SortingStrategy<T>? sortingStrategy,
+  }) {
+    sortingStrategy ??= DefaultSortingStrategy<T>();
 
-    return List.of(this)
-      ..sort((a, b) {
-        int result = 0;
-        for (final rule in rules) {
-          result = rule.compareComplex(a, b);
+    final list = List.of(this);
 
-          if (result != 0) return result;
-        }
+    if (rules.isEmpty) return list;
 
-        return result;
-      });
+    sortingStrategy.sort(list, (a, b) {
+      int result = 0;
+      for (final rule in rules) {
+        result = rule.compareComplex(a, b);
+
+        if (result != 0) return result;
+      }
+
+      return result;
+    });
+
+    return list;
   }
 }
