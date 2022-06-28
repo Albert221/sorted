@@ -1,3 +1,7 @@
+# 2.1.0
+
+- Add `SortingStrategy` which allows for customizing the sorting algorithm.
+
 # 2.0.0+1
 
 - Replace image with snippet in README.
