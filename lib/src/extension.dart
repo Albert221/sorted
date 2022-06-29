@@ -5,10 +5,10 @@ import 'package:sorted/src/sorting_strategy.dart';
 import 'rule.dart';
 
 extension Sorted<T> on Iterable<T> {
-  /// Returns a sorted list according to the [rules]. Order matters, so if
+  /// Returns a sorted list according to the `rules`. Order matters, so if
   /// first rule considers two items equal, next one will decide and so on.
   ///
-  /// A sorting strategy can be provided through [sortingStrategy] which
+  /// A sorting strategy can be provided through `sortingStrategy` which
   /// will perform the final sorting procedure. Defaults to [DefaultSortingStrategy].
   /// Consider using [MergeSortingStrategy] if a stable sort is needed.
   List<T> sorted(
