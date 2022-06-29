@@ -1,8 +1,7 @@
-import 'package:sorted/src/sorting_strategies/default.dart';
-import 'package:sorted/src/sorting_strategies/merge.dart';
-import 'package:sorted/src/sorting_strategy.dart';
-
 import 'rule.dart';
+import 'sorting_strategies/default.dart';
+import 'sorting_strategies/merge.dart';
+import 'sorting_strategy.dart';
 
 extension Sorted<T> on Iterable<T> {
   /// Returns a sorted list according to the `rules`. Order matters, so if

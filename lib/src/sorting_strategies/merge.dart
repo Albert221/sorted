@@ -1,4 +1,4 @@
-import 'package:sorted/src/sorting_strategy.dart';
+import '../sorting_strategy.dart';
 
 /// A [SortingStrategy] which uses merge sort, a stable sorting algorithm.
 class MergeSortingStrategy<T> implements SortingStrategy<T> {
