@@ -8,6 +8,6 @@ import 'sorting_strategies/merge.dart';
 ///  * [DefaultSortingStrategy], which uses Dart's default (unstable) sorting method.
 ///  * [MergeSortingStrategy], which uses merge sort, a stable sorting algorithm.
 abstract class SortingStrategy<T> {
-  /// Sorts [list] in place given a [comparator]
+  /// Sorts [list] in place given a [comparator].
   void sort(List<T> list, Comparator<T> comparator);
 }
