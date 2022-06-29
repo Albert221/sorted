@@ -1,6 +1,8 @@
 # 2.1.0
 
 - Add `SortingStrategy` which allows for customizing the sorting algorithm.
+  - Add `DefaultSortingStrategy`, which uses Dart's default (unstable) sorting method.
+  - Add `MergeSortingStrategy`, which uses merge sort, a stable sorting algorithm.
 
 # 2.0.0+1
 
