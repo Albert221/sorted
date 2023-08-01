@@ -11,7 +11,7 @@ extension Sorted<T> on Iterable<T> {
   /// will perform the final sorting procedure. Defaults to [DefaultSortingStrategy].
   /// Consider using [MergeSortingStrategy] if a stable sort is needed.
   List<T> sorted(
-    List<SortedRule> rules, {
+    List<SortedRule<T, dynamic>> rules, {
     SortingStrategy<T>? sortingStrategy,
   }) {
     sortingStrategy ??= DefaultSortingStrategy<T>();
